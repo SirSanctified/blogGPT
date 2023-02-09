@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="{% static 'js/script.js' %}" defer></script>
+    <title>{% block title%}{% endblock title%}</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">
+                <a href="{% url 'home' %}">BlogGPT</a>
+            </div>
+            <div class="navbar" id="menu">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'create_blog' %}">Create Blog</a>
+                <a href="https://pritchardmambambo.tech">About Author</a>
+            </div>
+            <button id="menu-btn" class="hamburger">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        <div class="text container">Follow author</div>
+        <div class="socials container">
+            <a href="http://pritchardmambambo.tech" target="_blank" rel="noopener noreferrer"><i class="uil uil-globe"></i></a>
+            <a href="http://linkedin.com/pritchard-mambambo-" target="_blank" rel="noopener noreferrer"><i class="uil uil-linkedin"></i></a>
+            <a href="http://github.com/SirSanctified" target="_blank" rel="noopener noreferrer"><i class="uil uil-github"></i></a>
+            <a href="http://twitter.com/Sir_sanctified" target="_blank" rel="noopener noreferrer"><i class="uil uil-twitter"></i></a>
+            <a href="http://facebook.com/pritchard.mambambo" target="_blank" rel="noopener noreferrer"><i class="uil uil-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

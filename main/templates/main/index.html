@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Home - BlogGPT
+{% endblock title %}
+
+{% block content %}
+<header>
+    <div class="container">
+        <div class="left">
+            <h1>Welcome To BlogGPT, The Revolutionary AI-Powered Blog Post Writing Tool.</h1>
+            <p>
+                At BlogGPT, we believe that the future of writing is powered by Artificial Intelligence. Our revolutionary AI-powered blog post writing tool leverages the power of GPT-3, the world's most advanced natural language processing technology, to generate full-length blog posts with a few clicks of your mouse.
+            </p>
+            <a href="{% url 'create_blog' %}">Get Started</a>
+        </div>
+        <div class="right">
+            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Robotic hand">
+        </div>
+    </div>
+</header>
+
+<section id="middle">
+    <div class="container">
+        <h2>Let BlogGPT Do The Work For You</h2>
+        <p>
+            No more spending hours writing and editing blog posts. BlogGPT does the work for you. All you have to do is enter a topic of your post and BlogGPT will generate a complete, unique and informative blog post in minutes.
+        </p>
+        <p>
+            Our AI-generated blog posts are perfect for businesses, websites, and personal blogs alike. BlogGPT is able to produce content that is tailored to your specific needs and topics. Whether you are looking for a comprehensive blog post about a particular topic or a list of points to guide you in writing your blog, BlogGPT is up to the task.
+        </p>
+    </div>
+</section>
+
+<section id="cta">
+    <div class="container">
+        <h6>
+            Get started today and unlock the power of AI-generated content. With BlogGPT, you'll never have to worry about running out of ideas or struggling to create content. Let BlogGPT take care of your content needs so you can focus on other aspects of your business.
+        </h6>
+        <div>
+            <a href="{% url 'create_blog' %}">Start Creating Now</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}
